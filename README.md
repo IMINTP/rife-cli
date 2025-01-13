@@ -1,3 +1,46 @@
+# RIFE CLI Tool
+
+간단한 커맨드 라인 인터페이스를 통해 RIFE 비디오 보간(Video Interpolation)을 실행할 수 있는 도구입니다.
+
+## 설치 방법
+
+```bash
+# Conda 환경 생성
+conda create -n RIFE python=3.8
+conda activate RIFE
+
+# 필요한 패키지 설치
+conda install numpy==1.19.5
+conda install pytorch torchvision cpuonly -c pytorch
+conda install opencv
+conda install -c conda-forge scikit-video
+conda install scipy pillow tqdm
+conda install lapack
+
+## 사용방법
+'''bash
+python cli_rife.py
+
+실행하면 다음 정보를 입력하라는 메시지가 표시됩니다:
+
+비디오 파일 경로 입력
+
+처리하고자 하는 비디오 파일의 전체 경로를 입력합니다
+예: /Users/username/videos/input.mp4
+
+Interpolation 배수 입력
+
+보간 배수를 지정합니다
+1: 2배 프레임 생성
+2: 4배 프레임 생성
+3: 8배 프레임 생성
+
+출력
+처리가 완료된 비디오는 입력 비디오와 동일한 디렉토리에 저장됩니다.
+파일명 형식: [원본파일명][배수]X[fps]fps.mp4
+
+```bash
+
 # Practical-RIFE 
 **[V4.0 Anime Demo Video](https://www.bilibili.com/video/BV1J3411t7qT?p=1&share_medium=iphone&share_plat=ios&share_session_id=7AE3DA72-D05C-43A0-9838-E2A80885BD4E&share_source=QQ&share_tag=s_i&timestamp=1639643780&unique_k=rjqO0EK)** | **[迭代经验](https://zhuanlan.zhihu.com/p/721430631)** | **[迭代QA](https://github.com/hzwer/Practical-RIFE/issues/124)** | **[Colab](https://colab.research.google.com/drive/1BZmGSq15O4ZU5vPfzkv7jFNYahTm6qwT?usp=sharing)**
 
